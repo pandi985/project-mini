@@ -1,0 +1,207 @@
+{
+	"id": "39f633d4-766b-4681-8fab-410317ff5d46",
+	"name": "directorN",
+	"timestamp": "2025-10-01T10:02:14.426Z",
+	"collection_id": "47946402-de50c6f0-2eeb-44d1-908f-753dd872e081",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 3,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-10-01T10:02:11.521Z",
+	"totalFail": 7,
+	"results": [
+		{
+			"id": "61c227c8-caa6-4537-aa14-a91603397aed",
+			"name": "byid",
+			"url": "http://localhost:3900/directors/2",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status respons adalah 200 OK": true,
+				"Respons adalah objek dengan skema yang benar": true,
+				"nilai id di dalam respons sesuai dengan yang di minta": false
+			},
+			"testPassFailCounts": {
+				"Status respons adalah 200 OK": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Respons adalah objek dengan skema yang benar": {
+					"pass": 1,
+					"fail": 0
+				},
+				"nilai id di dalam respons sesuai dengan yang di minta": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Status respons adalah 200 OK": true,
+					"Respons adalah objek dengan skema yang benar": true,
+					"nilai id di dalam respons sesuai dengan yang di minta": false
+				}
+			]
+		},
+		{
+			"id": "298b88de-c525-4cc2-bd2d-1aa216327956",
+			"name": "New Request",
+			"url": "http://localhost:3900/director",
+			"time": 4,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"status respons adalah 200 ok": false,
+				"header content-type adalah application/json": true,
+				"Body respons adalah sebuah array": false
+			},
+			"testPassFailCounts": {
+				"status respons adalah 200 ok": {
+					"pass": 0,
+					"fail": 1
+				},
+				"header content-type adalah application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body respons adalah sebuah array": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"status respons adalah 200 ok": false,
+					"header content-type adalah application/json": true,
+					"Body respons adalah sebuah array": false
+				}
+			]
+		},
+		{
+			"id": "0cb1a9f7-ee7e-4c73-aad3-bf5dd4bc8c70",
+			"name": "put",
+			"url": "http://localhost:3900/movies/2",
+			"time": 12,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Status respons adalah 200 OK": false
+			},
+			"testPassFailCounts": {
+				"Status respons adalah 200 OK": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				12
+			],
+			"allTests": [
+				{
+					"Status respons adalah 200 OK": false
+				}
+			]
+		},
+		{
+			"id": "c4706a59-9a48-4f4a-b316-ef6c8de6110b",
+			"name": "post",
+			"url": "http://localhost:3900/directors",
+			"time": 4,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status respons adalah 201 Created": false,
+				"respons berisi id film yang baru di buat dan menyimpannya": false
+			},
+			"testPassFailCounts": {
+				"Status respons adalah 201 Created": {
+					"pass": 0,
+					"fail": 1
+				},
+				"respons berisi id film yang baru di buat dan menyimpannya": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status respons adalah 201 Created": false,
+					"respons berisi id film yang baru di buat dan menyimpannya": false
+				}
+			]
+		},
+		{
+			"id": "8f7f30c7-2352-40dc-8691-fe9bf756a697",
+			"name": "New Request",
+			"url": "http://localhost:3900/directors/{{createdMovieId}}",
+			"time": 14,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"status respons adalah 204 no content": false
+			},
+			"testPassFailCounts": {
+				"status respons adalah 204 no content": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				14
+			],
+			"allTests": [
+				{
+					"status respons adalah 204 no content": false
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 44,
+	"collection": {
+		"requests": [
+			{
+				"id": "61c227c8-caa6-4537-aa14-a91603397aed",
+				"method": "GET"
+			},
+			{
+				"id": "298b88de-c525-4cc2-bd2d-1aa216327956",
+				"method": "GET"
+			},
+			{
+				"id": "0cb1a9f7-ee7e-4c73-aad3-bf5dd4bc8c70",
+				"method": "PUT"
+			},
+			{
+				"id": "c4706a59-9a48-4f4a-b316-ef6c8de6110b",
+				"method": "POST"
+			},
+			{
+				"id": "8f7f30c7-2352-40dc-8691-fe9bf756a697",
+				"method": "DELETE"
+			}
+		]
+	}
+}

@@ -1,0 +1,5 @@
+[dotenv@17.2.2] injecting env (2) from .env -- tip: 📡 auto-backup env with Radar: https://dotenvx.com/radar
+Server aktif di http://localhost:3900
+Terhubung ke basis data SQLite.
+Tabel 'movies' berhasil dibuat.
+Tabel 'directors' berhasil dibuat.
